@@ -6,7 +6,10 @@ module.exports = {
     // removeDeprecatedGapUtilities: true,
     // purgeLayersByDefault: true,
   },
-  purge: [],
+  mode: 'jit',
+  purge: [
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
   theme: {
     extend: {},
   },
