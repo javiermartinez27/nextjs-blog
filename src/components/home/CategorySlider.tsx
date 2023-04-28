@@ -14,66 +14,30 @@ function CategorySlider({ selectedCategory, setSelectedCategory }: CategorySlide
   const categoryOptions = {
     "games": (
       <div className="flex flex-row gap-x-1">
-        <div className={clsx("lg:hidden", selectedCategory !== "games" && "!inline")}>Juegos</div>
-        <div className={clsx("hidden", selectedCategory === "games" && "lg:!inline")}>Juegos</div>
-        {/* <div
-          className={clsx(
-            "w-14",
-            "rounded-tl-full rounded-br-full",
-            "bg-c1 text-black",
-            selectedCategory === "games" && "!bg-white !text-c1",
-          )}
-        >
-          -5%
-        </div> */}
+        <div className={clsx("inline lg:hidden", selectedCategory === "games" && "!hidden")}>🎮</div>
+        <div className={clsx("hidden lg:inline", selectedCategory === "games" && "!hidden")}>Juegos 🎮</div>
+        <div className={clsx("inline lg:hidden", selectedCategory !== "games" && "!hidden")}>Juegos 🎮</div>
       </div>
     ),
     "movies": (
       <div className="flex flex-row gap-x-1">
-        <div className={clsx("lg:hidden", selectedCategory !== "movies" && "!inline")}>Películas</div>
-        <div className={clsx("hidden", selectedCategory === "movies" && "lg:!inline")}>Películas</div>
-        <div
-          className={clsx(
-            "w-14",
-            "rounded-tl-full rounded-br-full",
-            "bg-blue-200 text-white",
-            selectedCategory === "movies" && "!bg-red-200",
-          )}
-        >
-          🎥
-        </div>
+        <div className={clsx("inline lg:hidden", selectedCategory === "movies" && "!hidden")}>🎥</div>
+        <div className={clsx("hidden lg:inline", selectedCategory === "movies" && "!hidden")}>Películas 🎥</div>
+        <div className={clsx("inline", selectedCategory !== "movies" && "!hidden")}>Películas 🎥</div>
       </div>
     ),
     "shows": (
       <div className="flex flex-row gap-x-1">
-        <div className={clsx("lg:hidden", selectedCategory !== "10 sesiones" && "!inline")}>Series</div>
-        <div className={clsx("hidden", selectedCategory === "10 sesiones" && "lg:!inline")}>Series</div>
-        {/* <div
-          className={clsx(
-            "w-14",
-            "rounded-tl-full rounded-br-full",
-            "bg-c1 text-white",
-            selectedCategory === "10 sesiones" && "!bg-white !text-c1",
-          )}
-        >
-          -10%
-        </div> */}
+        <div className={clsx("inline lg:hidden", selectedCategory === "shows" && "!hidden")}>📺</div>
+        <div className={clsx("hidden lg:inline", selectedCategory === "shows" && "!hidden")}>Series 📺</div>
+        <div className={clsx("inline lg:hidden", selectedCategory !== "shows" && "!hidden")}>Series 📺</div>
       </div>
     ),
     "others": (
       <div className="flex flex-row gap-x-1">
-        <div className={clsx("lg:hidden", selectedCategory !== "10 sesiones" && "!inline")}>Otros</div>
-        <div className={clsx("hidden", selectedCategory === "10 sesiones" && "lg:!inline")}>Otros</div>
-        {/* <div
-          className={clsx(
-            "w-14",
-            "rounded-tl-full rounded-br-full",
-            "bg-c1 text-white",
-            selectedCategory === "10 sesiones" && "!bg-white !text-c1",
-          )}
-        >
-          -10%
-        </div> */}
+        <div className={clsx("inline lg:hidden", selectedCategory === "others" && "!hidden")}>👨‍💻</div>
+        <div className={clsx("hidden lg:inline", selectedCategory === "others" && "!hidden")}>Otros 👨‍💻</div>
+        <div className={clsx("inline lg:hidden", selectedCategory !== "others" && "!hidden")}>Otros 👨‍💻</div>
       </div>
     ),
   };
