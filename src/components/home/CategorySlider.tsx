@@ -16,7 +16,7 @@ function CategorySlider({ selectedCategory, setSelectedCategory }: CategorySlide
       <div className="flex flex-row gap-x-1">
         <div className={clsx("inline lg:hidden", selectedCategory === "games" && "!hidden")}>🎮</div>
         <div className={clsx("hidden lg:inline", selectedCategory === "games" && "!hidden")}>Juegos 🎮</div>
-        <div className={clsx("inline lg:hidden", selectedCategory !== "games" && "!hidden")}>Juegos 🎮</div>
+        <div className={clsx("inline", selectedCategory !== "games" && "!hidden")}>Juegos 🎮</div>
       </div>
     ),
     "movies": (
@@ -30,14 +30,14 @@ function CategorySlider({ selectedCategory, setSelectedCategory }: CategorySlide
       <div className="flex flex-row gap-x-1">
         <div className={clsx("inline lg:hidden", selectedCategory === "shows" && "!hidden")}>📺</div>
         <div className={clsx("hidden lg:inline", selectedCategory === "shows" && "!hidden")}>Series 📺</div>
-        <div className={clsx("inline lg:hidden", selectedCategory !== "shows" && "!hidden")}>Series 📺</div>
+        <div className={clsx("inline", selectedCategory !== "shows" && "!hidden")}>Series 📺</div>
       </div>
     ),
     "others": (
       <div className="flex flex-row gap-x-1">
         <div className={clsx("inline lg:hidden", selectedCategory === "others" && "!hidden")}>👨‍💻</div>
         <div className={clsx("hidden lg:inline", selectedCategory === "others" && "!hidden")}>Otros 👨‍💻</div>
-        <div className={clsx("inline lg:hidden", selectedCategory !== "others" && "!hidden")}>Otros 👨‍💻</div>
+        <div className={clsx("inline", selectedCategory !== "others" && "!hidden")}>Otros 👨‍💻</div>
       </div>
     ),
   };
@@ -51,11 +51,11 @@ function CategorySlider({ selectedCategory, setSelectedCategory }: CategorySlide
   }, [selectedCategory]);
 
   return (
-    <section className={clsx("w-full px-5")}>
+    <section className={clsx("w-full px-2")}>
       <div
         className={clsx(
           "lg:w-1/2",
-          "grid grid-cols-4 gap-x-5",
+          "grid grid-cols-4 gap-x-1",
           "mx-auto p-1",
           "bg-white",
           "rounded-full md:rounded-xl",
@@ -65,7 +65,7 @@ function CategorySlider({ selectedCategory, setSelectedCategory }: CategorySlide
         <div
           className={clsx(
             "h-5/6 w-1/4",
-            "bg-c1",
+            "bg-lime-600/80",
             "rounded-full md:rounded-xl",
             "absolute transition-transform duration-300",
             "border border-white shadow-sm",
@@ -85,7 +85,7 @@ function CategorySlider({ selectedCategory, setSelectedCategory }: CategorySlide
                   "z-10",
                   "col-span-1",
                   "py-1",
-                  "bg-blue-100",
+                  "bg-transparent",
                   "rounded-xl",
                   "transition-colors duration-200",
                   "disabled:cursor-not-allowed",
