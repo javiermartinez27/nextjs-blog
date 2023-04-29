@@ -1,17 +1,27 @@
 import React from "react";
+
+import Image from 'next/image'
+
 import CategorySlider from "@/components/home/CategorySlider";
 import GamesArticles from "@/components/home/GamesArticles";
 import MoviesArticles from "@/components/home/MoviesArticles";
 import ShowsArticles from "@/components/home/ShowsArticles";
 import OtherArticles from "@/components/home/OtherArticles";
+import logo from "@/images/logo.png";
 
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = React.useState("games");
   return (
-    <div className="w-full h-screen flex flex-col gap-y-10 ">
-      <div className="text-xl font-bold p-2">Este es mi blog! :D</div>
+    <div className="w-full h-screen flex flex-col gap-y-2">
+      <Image
+        className="p-4"
+        src={logo}
+        width={250}
+        height={70}
+        alt="Bafanada logo"
+      />
       <CategorySlider selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
-      <section className="flex justify-center">
+      <section className="flex justify-center py-4">
         {selectedCategory === "games" && (
           <GamesArticles/>
         )}
