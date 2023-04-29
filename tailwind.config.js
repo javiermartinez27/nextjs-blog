@@ -18,7 +18,7 @@ module.exports = {
         ...colors,
       },
       fontFamily: {
-        sans: ['optima', 'sans-serif'],
+        sans: ['Open Sans', 'sans-serif'],
       },
     },
   },
