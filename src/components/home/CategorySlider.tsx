@@ -65,7 +65,7 @@ function CategorySlider({ selectedCategory, setSelectedCategory }: CategorySlide
         <div
           className={clsx(
             "h-5/6 w-1/4",
-            "bg-lime-600/80",
+            "bg-[#1A7B54]",
             "rounded-full md:rounded-xl",
             "absolute transition-transform duration-300",
             "border border-white shadow-sm",
