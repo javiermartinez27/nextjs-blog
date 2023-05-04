@@ -7,8 +7,8 @@ import mainImage from "@/images/articles/games/silentHill2/SilentHill2_1.webp";
 const SILENT_HILL_2 = {
   title: 'Silent Hill 2 – El terror y la tristeza',
   subtitle: 'El tan proclamado mejor juego de terror de la historia: Silent Hill 2. Veamos cómo genera miedo y busca ir más allá de este.',
-  mainImage: (<Image className="rounded-xl" src={mainImage} alt="Article image"/>),
-  sideImage: (<Image className="rounded-xl" src={mainImage} alt="Article image"/>),
+  mainImage: (<Image className="rounded-xl border-white border-4" src={mainImage} alt="Article image"/>),
+  sideImage: (<Image className="rounded-xl border-white border-4" height={150} src={mainImage} alt="Article image"/>),
   link: '/games/silent-hill-2-el-terror-y-la-tristeza',
   tags: ['Terror'],
   p1: {
