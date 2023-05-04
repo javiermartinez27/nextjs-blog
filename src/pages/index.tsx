@@ -21,7 +21,7 @@ export default function Home() {
         alt="Bafanada logo"
       />
       <CategorySlider selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
-      <section className="flex justify-center py-4">
+      <section className="px-20 py-8">
         {selectedCategory === "games" && (
           <GamesArticles/>
         )}
