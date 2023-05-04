@@ -12,7 +12,7 @@ import logo from "@/images/logo.png";
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = React.useState("games");
   return (
-    <div className="w-full h-screen flex flex-col gap-y-2">
+    <div className="w-full h-screen flex flex-col">
       <Image
         className="p-4"
         src={logo}
@@ -21,7 +21,7 @@ export default function Home() {
         alt="Bafanada logo"
       />
       <CategorySlider selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
-      <section className="flex justify-center py-4">
+      <section className="px-5 lg:px-20">
         {selectedCategory === "games" && (
           <GamesArticles/>
         )}

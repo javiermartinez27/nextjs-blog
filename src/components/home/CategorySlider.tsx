@@ -51,7 +51,7 @@ function CategorySlider({ selectedCategory, setSelectedCategory }: CategorySlide
   }, [selectedCategory]);
 
   return (
-    <section className={clsx("w-full px-2")}>
+    <section className={clsx("w-full px-5 pb-5")}>
       <div
         className={clsx(
           "lg:w-1/2",
@@ -93,7 +93,7 @@ function CategorySlider({ selectedCategory, setSelectedCategory }: CategorySlide
                   selectedCategory !== option && "hover:bg-gray-200/70",
                 )}
               >
-                <p
+                <div
                   className={clsx(
                     "text-center text-sm text-examedi-black-dark",
                     "font-medium",
@@ -105,7 +105,7 @@ function CategorySlider({ selectedCategory, setSelectedCategory }: CategorySlide
                   )}
                 >
                   {categoryOptions[option as keyof typeof categoryOptions]}
-                </p>
+                </div>
               </button>
             </React.Fragment>
           ))}
