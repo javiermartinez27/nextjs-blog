@@ -51,7 +51,7 @@ function CategorySlider({ selectedCategory, setSelectedCategory }: CategorySlide
   }, [selectedCategory]);
 
   return (
-    <section className={clsx("w-full px-2")}>
+    <section className={clsx("w-full px-5 pb-5")}>
       <div
         className={clsx(
           "lg:w-1/2",

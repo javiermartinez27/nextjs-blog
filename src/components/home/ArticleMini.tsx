@@ -1,13 +1,24 @@
+import clsx from "clsx";
+
 type ArticleMiniProps = {
   title: string;
+  tags: string[];
+  image: JSX.Element;
 }
 
-function ArticleMini({ title }: ArticleMiniProps){
+function ArticleMini({ title, tags, image }: ArticleMiniProps){
   return (
     <div className="flex flex-col gap-y-1 p-2 m-2">
-      <div className="bg-gray-200 rounded-xl p-2 h-10"/>
-      <div className="rounded-xl border-2 bg-transparent border-green-700 w-20 text-center">hola</div>
-      <div>{title}</div>
+      <div className="w-full mb-3 lg:pr-10">{image}</div>
+      {tags.map((tag, index) => (
+        <div
+          key={index}
+          className={clsx("rounded-xl border-2 border-green-700", "bg-transparent", "w-20", "text-sm text-center")}
+        >
+          {tag}
+        </div>
+      ))}
+      <div className="font-bold text-xl">{title}</div>
       <div>Ver nota completa...</div>
     </div>
   )

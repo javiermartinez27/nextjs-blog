@@ -1,7 +1,16 @@
+import React from 'react';
+
+import Image from 'next/image';
+
+import mainImage from "@/images/articles/games/silentHill2/SilentHill2_1.webp";
+
 const SILENT_HILL_2 = {
   title: 'Silent Hill 2 – El terror y la tristeza',
   subtitle: 'El tan proclamado mejor juego de terror de la historia: Silent Hill 2. Veamos cómo genera miedo y busca ir más allá de este.',
+  mainImage: (<Image className="rounded-xl" src={mainImage} alt="Article image"/>),
+  sideImage: (<Image className="rounded-xl" src={mainImage} alt="Article image"/>),
   link: '/games/silent-hill-2-el-terror-y-la-tristeza',
+  tags: ['Terror'],
   p1: {
     ph1: "¿Cuál fue el momento más triste en tu vida? Quizás perdiste a alguien muy cercan@ a ti, o cometiste un error imposible de enmendar. Tal vez estuviste (o estás) tan perdid@, que no tienes ni una idea de cómo avanzar con tu vida. ¿Sentiste también miedo en ese momento?",
     ph2: "Esto es lo que Silent Hill 2 toma como punto de partida, con el protagonista, James, recibiendo un recordatorio de su mayor tristeza; una carta de su esposa muerta, diciendo que lo espera en Silent Hill. Como es sabido, aquí el terror lo estará esperando en cada esquina, pero, ¿qué nos hace sentir miedo? ¿Lo desconocido? Esto puede venir de muchas formas…",
